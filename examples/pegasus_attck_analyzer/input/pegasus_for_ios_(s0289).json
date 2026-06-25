@@ -1,0 +1,236 @@
+{
+	"name": "Pegasus for iOS (S0289)",
+	"versions": {
+		"attack": "19",
+		"navigator": "5.3.2",
+		"layer": "4.5"
+	},
+	"domain": "mobile-attack",
+	"description": "Mobile techniques used by Pegasus for iOS, ATT&CK software S0289 (v1.2)",
+	"filters": {
+		"platforms": [
+			"Android",
+			"iOS"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1429",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) has the ability to record audio.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1645",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) modifies the system partition to maintain persistence.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1456",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) was distributed through a web site by exploiting vulnerabilities in the Safari web browser on iOS devices.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1658",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) can compromise iPhones running iOS 16.6 without any user interaction.(Citation: Scott-Railton_TheCitizenLab Pegasus Apr2022)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1664",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) has used zero-day iMessage exploits for initial access.(Citation: CitizenLab Great iPwn)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1404",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) exploits iOS vulnerabilities to escalate privileges.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1430",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) update and sends the location of the phone.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1430",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) update and sends the location of the phone.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1644",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) uses SMS for command and control.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1660",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) has been distributed via malicious links in SMS messages.(Citation: CitizenLab Great iPwn)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1636",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1636.002",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) captures call logs.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1636.003",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) gathers contacts from the system by dumping the victim's address book.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1636.004",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) captures SMS messages that the victim sends or receives.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1409",
+			"tactic": "collection",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) accesses sensitive data in files, such as saving Skype calls by reading them out of the Skype database files.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1426",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) monitors the victim for status and disables other access to the phone by other jailbreaking software.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1421",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[Pegasus for iOS](https://attack.mitre.org/software/S0289) monitors the connection state and tracks which types of networks the phone is connected to, potentially to determine the bandwidth and ability to send full data across the network.(Citation: Lookout-Pegasus)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffffff",
+			"#66b1ffff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Pegasus for iOS"
+		}
+	],
+	"metadata": [],
+	"links": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": true,
+	"selectVisibleTechniques": true
+}

@@ -1,0 +1,722 @@
+{
+  "input_directory": "/home/user/pyjs/examples/pegasus_attck_analyzer/input",
+  "files_detected": [
+    "S0289-mobile-layer.json",
+    "S0316-mobile-layer.json",
+    "changelog.json",
+    "known_exploited_vulnerabilities.csv",
+    "pegasus_for_android_(s0316).json",
+    "pegasus_for_android_(s0316).xlsx",
+    "pegasus_for_ios_(s0289).json"
+  ],
+  "pegasus": {
+    "android_full": {
+      "source_file": "pegasus_for_android_(s0316).json",
+      "name": "Pegasus for Android (S0316)",
+      "description": "Mobile techniques used by Pegasus for Android, ATT&CK software S0316 (v1.2)",
+      "domain": "mobile-attack",
+      "versions": {
+        "attack": "19",
+        "navigator": "5.3.2",
+        "layer": "4.5"
+      },
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "technique_count": 16,
+      "commented_technique_count": 14,
+      "subtechnique_count": 6,
+      "tactic_counts": {
+        "collection": 7,
+        "persistence": 3,
+        "privilege-escalation": 1,
+        "command-and-control": 1,
+        "discovery": 4
+      },
+      "technique_ids": [
+        "T1429",
+        "T1645",
+        "T1624",
+        "T1624.001",
+        "T1404",
+        "T1644",
+        "T1636",
+        "T1636.001",
+        "T1636.002",
+        "T1636.003",
+        "T1418",
+        "T1409",
+        "T1422",
+        "T1422.001",
+        "T1422.002",
+        "T1512"
+      ]
+    },
+    "ios_full": {
+      "source_file": "pegasus_for_ios_(s0289).json",
+      "name": "Pegasus for iOS (S0289)",
+      "description": "Mobile techniques used by Pegasus for iOS, ATT&CK software S0289 (v1.2)",
+      "domain": "mobile-attack",
+      "versions": {
+        "attack": "19",
+        "navigator": "5.3.2",
+        "layer": "4.5"
+      },
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "technique_count": 17,
+      "commented_technique_count": 16,
+      "subtechnique_count": 3,
+      "tactic_counts": {
+        "collection": 7,
+        "persistence": 1,
+        "initial-access": 3,
+        "execution": 1,
+        "privilege-escalation": 1,
+        "discovery": 3,
+        "command-and-control": 1
+      },
+      "technique_ids": [
+        "T1429",
+        "T1645",
+        "T1456",
+        "T1658",
+        "T1664",
+        "T1404",
+        "T1430",
+        "T1430",
+        "T1644",
+        "T1660",
+        "T1636",
+        "T1636.002",
+        "T1636.003",
+        "T1636.004",
+        "T1409",
+        "T1426",
+        "T1421"
+      ]
+    },
+    "android_layer": {
+      "source_file": "S0316-mobile-layer.json",
+      "name": "Pegasus for Android (S0316)",
+      "description": "Mobile techniques used by Pegasus for Android, ATT&CK software S0316 (v1.2)",
+      "domain": "mobile-attack",
+      "versions": {
+        "layer": "4.5",
+        "attack": "19",
+        "navigator": "5.3.2"
+      },
+      "platforms": [],
+      "technique_count": 16,
+      "commented_technique_count": 14,
+      "subtechnique_count": 6,
+      "tactic_counts": {
+        "unknown": 16
+      },
+      "technique_ids": [
+        "T1429",
+        "T1645",
+        "T1624",
+        "T1624.001",
+        "T1404",
+        "T1644",
+        "T1636",
+        "T1636.001",
+        "T1636.002",
+        "T1636.003",
+        "T1418",
+        "T1409",
+        "T1422",
+        "T1422.001",
+        "T1422.002",
+        "T1512"
+      ]
+    },
+    "ios_layer": {
+      "source_file": "S0289-mobile-layer.json",
+      "name": "Pegasus for iOS (S0289)",
+      "description": "Mobile techniques used by Pegasus for iOS, ATT&CK software S0289 (v1.2)",
+      "domain": "mobile-attack",
+      "versions": {
+        "layer": "4.5",
+        "attack": "19",
+        "navigator": "5.3.2"
+      },
+      "platforms": [],
+      "technique_count": 16,
+      "commented_technique_count": 15,
+      "subtechnique_count": 3,
+      "tactic_counts": {
+        "unknown": 16
+      },
+      "technique_ids": [
+        "T1429",
+        "T1645",
+        "T1456",
+        "T1658",
+        "T1664",
+        "T1404",
+        "T1430",
+        "T1644",
+        "T1660",
+        "T1636",
+        "T1636.002",
+        "T1636.003",
+        "T1636.004",
+        "T1409",
+        "T1426",
+        "T1421"
+      ]
+    },
+    "comparison": {
+      "shared_techniques": [
+        "T1404",
+        "T1409",
+        "T1429",
+        "T1636",
+        "T1636.002",
+        "T1636.003",
+        "T1644",
+        "T1645"
+      ],
+      "android_only": [
+        "T1418",
+        "T1422",
+        "T1422.001",
+        "T1422.002",
+        "T1512",
+        "T1624",
+        "T1624.001",
+        "T1636.001"
+      ],
+      "ios_only": [
+        "T1421",
+        "T1426",
+        "T1430",
+        "T1456",
+        "T1636.004",
+        "T1658",
+        "T1660",
+        "T1664"
+      ],
+      "shared_count": 8,
+      "android_only_count": 8,
+      "ios_only_count": 8
+    }
+  },
+  "kev": {
+    "record_count": 1627,
+    "columns": [
+      "cveID",
+      "vendorProject",
+      "product",
+      "vulnerabilityName",
+      "dateAdded",
+      "shortDescription",
+      "requiredAction",
+      "dueDate",
+      "knownRansomwareCampaignUse",
+      "notes",
+      "cwes"
+    ],
+    "top_vendors": {
+      "Microsoft": 377,
+      "Apple": 93,
+      "Cisco": 92,
+      "Adobe": 79,
+      "Google": 72,
+      "Oracle": 44,
+      "Apache": 39,
+      "Ivanti": 35,
+      "Linux": 26,
+      "D-Link": 26
+    },
+    "top_products": {
+      "Windows": 170,
+      "Multiple Products": 79,
+      "Chromium V8": 39,
+      "Internet Explorer": 36,
+      "Flash Player": 33,
+      "Kernel": 29,
+      "Office": 29,
+      "Win32k": 25,
+      "Exchange Server": 17,
+      "Zimbra Collaboration Suite (ZCS)": 15
+    },
+    "ransomware_usage_counts": {
+      "Unknown": 1300,
+      "Known": 327
+    },
+    "sample_records": [
+      {
+        "cveID": "CVE-2025-67038",
+        "vendorProject": "Lantronix",
+        "product": "EDS5000",
+        "vulnerabilityName": "Lantronix EDS5000 Code Injection Vulnerability",
+        "dateAdded": "2026-06-23",
+        "shortDescription": "Lantronix EDS5000 contains a code injection vulnerability that could allow attackers to inject arbitrary OS commands into the username parameter. Injected commands are executed with root privileges.",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "dueDate": "2026-06-26",
+        "knownRansomwareCampaignUse": "Unknown",
+        "notes": "https://ltrxdev.atlassian.net/wiki/spaces/LTRXTS/pages/2538438657/Latest+Firmware+for+the+EDS5000+series+EDS5008+EDS5016+EDS5032 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-67038",
+        "cwes": "CWE-78, CWE-94"
+      },
+      {
+        "cveID": "CVE-2026-34910",
+        "vendorProject": "Ubiquiti",
+        "product": "UniFi OS",
+        "vulnerabilityName": "Ubiquiti UniFi OS Improper Input Validation Vulnerability",
+        "dateAdded": "2026-06-23",
+        "shortDescription": "Ubiquiti UniFi OS contains an improper input validation vulnerability which could allow a malicious actor with access to the network to conduct command injection.",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "dueDate": "2026-06-26",
+        "knownRansomwareCampaignUse": "Unknown",
+        "notes": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-34910",
+        "cwes": "CWE-20"
+      },
+      {
+        "cveID": "CVE-2026-34909",
+        "vendorProject": "Ubiquiti",
+        "product": "UniFi OS",
+        "vulnerabilityName": "Ubiquiti UniFi OS Path Traversal Vulnerability",
+        "dateAdded": "2026-06-23",
+        "shortDescription": "Ubiquiti UniFi OS contains a path traversal vulnerability which could allow a malicious actor with access to the network to access files on the underlying system that could be manipulated to access an underlying account.",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "dueDate": "2026-06-26",
+        "knownRansomwareCampaignUse": "Unknown",
+        "notes": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-34909",
+        "cwes": "CWE-22"
+      },
+      {
+        "cveID": "CVE-2026-34908",
+        "vendorProject": "Ubiquiti",
+        "product": "UniFi OS",
+        "vulnerabilityName": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
+        "dateAdded": "2026-06-23",
+        "shortDescription": "Ubiquiti UniFi OS contains an improper access control vulnerability which could allow a malicious actor with access to the network to make unauthorized changes to the system.",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "dueDate": "2026-06-26",
+        "knownRansomwareCampaignUse": "Unknown",
+        "notes": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-34908",
+        "cwes": "CWE-284"
+      },
+      {
+        "cveID": "CVE-2026-20253",
+        "vendorProject": "Splunk",
+        "product": "Enterprise",
+        "vulnerabilityName": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
+        "dateAdded": "2026-06-18",
+        "shortDescription": "Splunk Enterprise contains a missing authentication for critical function vulnerability which could allow an unauthenticated user to create or truncate arbitrary files through a PostgreSQL sidecar service endpoint.",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "dueDate": "2026-06-21",
+        "knownRansomwareCampaignUse": "Unknown",
+        "notes": "https://advisory.splunk.com/advisories/SVD-2026-0603 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20253",
+        "cwes": "CWE-306"
+      }
+    ]
+  },
+  "changelog": {
+    "enterprise-attack": {
+      "techniques": {
+        "additions": 23,
+        "major_version_changes": 199,
+        "minor_version_changes": 2,
+        "other_version_changes": 0,
+        "patches": 25,
+        "revocations": 17,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "software": {
+        "additions": 37,
+        "major_version_changes": 2,
+        "minor_version_changes": 27,
+        "other_version_changes": 0,
+        "patches": 5,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "groups": {
+        "additions": 2,
+        "major_version_changes": 3,
+        "minor_version_changes": 4,
+        "other_version_changes": 0,
+        "patches": 9,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "campaigns": {
+        "additions": 4,
+        "major_version_changes": 0,
+        "minor_version_changes": 2,
+        "other_version_changes": 0,
+        "patches": 2,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "assets": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "mitigations": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 1,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datasources": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datacomponents": {
+        "additions": 0,
+        "major_version_changes": 10,
+        "minor_version_changes": 14,
+        "other_version_changes": 0,
+        "patches": 2,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "detectionstrategies": {
+        "additions": 8,
+        "major_version_changes": 0,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 8,
+        "revocations": 0,
+        "deprecations": 2,
+        "deletions": 0
+      },
+      "analytics": {
+        "additions": 19,
+        "major_version_changes": 0,
+        "minor_version_changes": 8,
+        "other_version_changes": 0,
+        "patches": 7,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      }
+    },
+    "mobile-attack": {
+      "techniques": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "software": {
+        "additions": 4,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "groups": {
+        "additions": 5,
+        "major_version_changes": 1,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "campaigns": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "assets": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "mitigations": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datasources": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datacomponents": {
+        "additions": 12,
+        "major_version_changes": 0,
+        "minor_version_changes": 15,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "detectionstrategies": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "analytics": {
+        "additions": 0,
+        "major_version_changes": 7,
+        "minor_version_changes": 131,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      }
+    },
+    "ics-attack": {
+      "techniques": {
+        "additions": 23,
+        "major_version_changes": 0,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 1,
+        "revocations": 9,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "software": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 6,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "groups": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 1,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "campaigns": {
+        "additions": 1,
+        "major_version_changes": 0,
+        "minor_version_changes": 1,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "assets": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 18,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "mitigations": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 17,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datasources": {
+        "additions": 0,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "datacomponents": {
+        "additions": 0,
+        "major_version_changes": 8,
+        "minor_version_changes": 11,
+        "other_version_changes": 0,
+        "patches": 2,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "detectionstrategies": {
+        "additions": 14,
+        "major_version_changes": 0,
+        "minor_version_changes": 0,
+        "other_version_changes": 0,
+        "patches": 0,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      },
+      "analytics": {
+        "additions": 14,
+        "major_version_changes": 0,
+        "minor_version_changes": 2,
+        "other_version_changes": 0,
+        "patches": 1,
+        "revocations": 0,
+        "deprecations": 0,
+        "deletions": 0
+      }
+    },
+    "new-contributors": {
+      "count": 62,
+      "sample": [
+        "Alberto Garcia",
+        "Alex Soler, AttackIQ",
+        "Alex Wong",
+        "Arad Inbar",
+        "Arad Inbar, Fidelis Security",
+        "Arun Seelagan, CISA",
+        "Austin Clark, @c2defense",
+        "Blake Strom, Microsoft Threat Intelligence",
+        "Caio Silva",
+        "Cian Heasley"
+      ]
+    }
+  },
+  "xlsx": {
+    "sheet_count": 1,
+    "sheets": {
+      "Mobile ATT&CK (v19)": {
+        "row_count": 19,
+        "columns": [
+          "Initial Access",
+          "Execution",
+          "Persistence",
+          "column_4",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Credential Access",
+          "Discovery",
+          "column_9",
+          "Lateral Movement",
+          "Collection",
+          "column_12",
+          "Command and Control",
+          "Exfiltration",
+          "Impact"
+        ],
+        "sample_rows": [
+          {
+            "Initial Access": "Application Versioning",
+            "Execution": "Command and Scripting Interpreter",
+            "Persistence": "Boot or Logon Initialization Scripts",
+            "column_4": null,
+            "Privilege Escalation": "Abuse Elevation Control Mechanism",
+            "Defense Evasion": "Application Versioning",
+            "Credential Access": "Abuse Accessibility Features",
+            "Discovery": "File and Directory Discovery",
+            "column_9": null,
+            "Lateral Movement": "Exploitation of Remote Services",
+            "Collection": "Abuse Accessibility Features",
+            "column_12": null,
+            "Command and Control": "Application Layer Protocol",
+            "Exfiltration": "Exfiltration Over Alternative Protocol",
+            "Impact": "Account Access Removal"
+          },
+          {
+            "Initial Access": "Drive-By Compromise",
+            "Execution": "Exploitation for Client Execution",
+            "Persistence": "Compromise Application Executable",
+            "column_4": null,
+            "Privilege Escalation": "Exploitation for Privilege Escalation",
+            "Defense Evasion": "Download New Code at Runtime",
+            "Credential Access": "Access Notifications",
+            "Discovery": "Location Tracking",
+            "column_9": null,
+            "Lateral Movement": "Replication Through Removable Media",
+            "Collection": "Access Notifications",
+            "column_12": null,
+            "Command and Control": "Call Control",
+            "Exfiltration": "Exfiltration Over C2 Channel",
+            "Impact": "Call Control"
+          },
+          {
+            "Initial Access": "Exploitation for Initial Access",
+            "Execution": "Native API",
+            "Persistence": "Compromise Client Software Binary",
+            "column_4": null,
+            "Privilege Escalation": "Process Injection",
+            "Defense Evasion": "Execution Guardrails",
+            "Credential Access": "Clipboard Data",
+            "Discovery": "Network Service Scanning",
+            "column_9": null,
+            "Lateral Movement": null,
+            "Collection": "Adversary-in-the-Middle",
+            "column_12": null,
+            "Command and Control": "Dynamic Resolution",
+            "Exfiltration": null,
+            "Impact": "Data Destruction"
+          }
+        ]
+      }
+    }
+  }
+}
