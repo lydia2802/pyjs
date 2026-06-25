@@ -1,0 +1,13 @@
+{
+  "name": "pegasus-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Node.js static server + Tailwind CLI bridge for the pyjs Pegasus/ATT&CK dashboard example.",
+  "type": "module",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

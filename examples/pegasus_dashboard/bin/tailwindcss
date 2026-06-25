@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+// pyjs's transpiler shells out to a binary named "tailwindcss" and pipes a
+// snippet of HTML into it via `tailwindcss --content -`, expecting generated
+// CSS back on stdout (see pyjs/transpiler/utils.py: TailwindCSS.get_css).
+// The real Tailwind CLI (v3+) only accepts file glob paths for --content, not
+// stdin, so this shim bridges the two: it buffers stdin to a temp file and
+// re-invokes the real CLI (installed via npm) pointed at that file.
+import { spawnSync } from "node:child_process";
+import { mkdtempSync, writeFileSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const here = dirname(fileURLToPath(import.meta.url));
+const realCli = join(here, "..", "node_modules", ".bin", "tailwindcss");
+
+const html = readFileSync(0, "utf-8");
+const dir = mkdtempSync(join(tmpdir(), "pyjs-tailwind-"));
+const inputFile = join(dir, "source.html");
+const outputFile = join(dir, "output.css");
+writeFileSync(inputFile, html);
+
+const result = spawnSync(realCli, ["--content", inputFile, "-o", outputFile], {
+  stdio: ["ignore", "ignore", "inherit"],
+});
+
+if (result.status !== 0) {
+  rmSync(dir, { recursive: true, force: true });
+  process.exit(result.status ?? 1);
+}
+
+process.stdout.write(readFileSync(outputFile, "utf-8"));
+rmSync(dir, { recursive: true, force: true });
