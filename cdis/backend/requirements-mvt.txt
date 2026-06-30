@@ -1,0 +1,5 @@
+# Optional: enables /api/scan/ios and /api/scan/android.
+# mvt-android works on Windows, Linux, macOS and Termux (needs adb).
+# mvt-ios needs libimobiledevice, which has no official Windows build -
+# use WSL or Linux/macOS/Termux if you need iOS backup scanning.
+mvt>=2.5.0

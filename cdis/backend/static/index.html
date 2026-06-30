@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDIS - Cyber Defense Intelligence System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>CDIS</h1>
+  <span id="status-badge" class="badge">checking...</span>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Status</h2>
+    <button id="btn-sync">Sync KEV dari CISA</button>
+    <pre id="sync-output"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Known Exploited Vulnerabilities</h2>
+    <div class="search-row">
+      <input id="search-input" type="text" placeholder="Cari CVE, vendor, produk...">
+      <button id="btn-search">Cari</button>
+      <button id="btn-list">Tampilkan Semua</button>
+    </div>
+    <table id="kev-table">
+      <thead>
+        <tr><th>CVE</th><th>Nama</th><th>Vendor</th><th>Tanggal Ditambahkan</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Scan Backup Mobile (MVT)</h2>
+    <div class="scan-row">
+      <select id="scan-platform">
+        <option value="android">Android</option>
+        <option value="ios">iOS</option>
+      </select>
+      <input id="scan-path" type="text" placeholder="Path ke backup, mis. /sdcard/backup">
+      <button id="btn-scan">Scan</button>
+    </div>
+    <pre id="scan-output"></pre>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+venv/
+backend/data/*.csv
+backend/data/scan_output/
