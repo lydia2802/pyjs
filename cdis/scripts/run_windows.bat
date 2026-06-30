@@ -4,11 +4,14 @@ setlocal
 set "SCRIPT_DIR=%~dp0"
 set "CDIS_ROOT=%SCRIPT_DIR%.."
 
-if exist "%CDIS_ROOT%\venv\Scripts\activate.bat" (
-    call "%CDIS_ROOT%\venv\Scripts\activate.bat"
+where python >nul 2>nul
+if errorlevel 1 (
+    echo Python tidak ditemukan di PATH. Install Python 3 dari https://www.python.org/downloads/
+    echo dan centang "Add python.exe to PATH" saat instalasi.
+    exit /b 1
 )
 
-cd /d "%CDIS_ROOT%\backend"
-python app.py
+cd /d "%CDIS_ROOT%"
+python run.py %*
 
 endlocal

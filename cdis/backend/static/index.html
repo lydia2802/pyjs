@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CDIS - Cyber Defense Intelligence System</title>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#161b22">
 </head>
 <body>
 <header>
@@ -13,8 +15,9 @@
 </header>
 
 <main>
-  <section class="panel">
-    <h2>Status</h2>
+  <section class="panel" id="stats-panel">
+    <h2>Statistik Katalog</h2>
+    <div id="stats-cards" class="stats-cards"></div>
     <button id="btn-sync">Sync KEV dari CISA</button>
     <pre id="sync-output"></pre>
   </section>
@@ -25,6 +28,8 @@
       <input id="search-input" type="text" placeholder="Cari CVE, vendor, produk...">
       <button id="btn-search">Cari</button>
       <button id="btn-list">Tampilkan Semua</button>
+      <a id="btn-export-json" class="button-link" href="/api/export?format=json" download>Export JSON</a>
+      <a id="btn-export-csv" class="button-link" href="/api/export?format=csv" download>Export CSV</a>
     </div>
     <table id="kev-table">
       <thead>
@@ -32,6 +37,11 @@
       </thead>
       <tbody></tbody>
     </table>
+    <div class="pagination-row">
+      <button id="btn-prev">&laquo; Sebelumnya</button>
+      <span id="page-info">-</span>
+      <button id="btn-next">Berikutnya &raquo;</button>
+    </div>
   </section>
 
   <section class="panel">
@@ -45,6 +55,13 @@
       <button id="btn-scan">Scan</button>
     </div>
     <pre id="scan-output"></pre>
+    <h3>Riwayat Scan</h3>
+    <table id="scan-table">
+      <thead>
+        <tr><th>#</th><th>Platform</th><th>Status</th><th>Path</th><th>Waktu</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </section>
 </main>
 

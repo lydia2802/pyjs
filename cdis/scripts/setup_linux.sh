@@ -1,21 +1,15 @@
 #!/usr/bin/env bash
-# Sets up CDIS on Linux/macOS.
-# Usage: bash scripts/setup_linux.sh
+# Checks prerequisites for CDIS on Linux/macOS.
+# (Python venv + pip dependencies are handled automatically by run.py.)
 set -e
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CDIS_ROOT="$(dirname "$SCRIPT_DIR")"
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
-echo "==> Creating virtual environment"
-"$PYTHON_BIN" -m venv "$CDIS_ROOT/venv"
+if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
+    echo "$PYTHON_BIN tidak ditemukan. Install Python 3 lewat package manager distro Anda."
+    exit 1
+fi
 
-echo "==> Installing backend dependencies"
-"$CDIS_ROOT/venv/bin/pip" install --upgrade pip
-"$CDIS_ROOT/venv/bin/pip" install -r "$CDIS_ROOT/backend/requirements.txt"
-
-echo
-echo "Setup complete."
-echo "Start the backend with: bash scripts/run_linux.sh"
-echo "Then use the CLI: venv/bin/python cli/cdis.py health"
+echo "Python ditemukan ($("$PYTHON_BIN" --version))."
+echo "Virtual environment dan dependency akan dipasang otomatis saat"
+echo "pertama kali menjalankan: bash scripts/run_linux.sh"

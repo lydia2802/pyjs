@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
-# Starts the CDIS backend on Linux/macOS.
-# Usage: bash scripts/run_linux.sh
+# Starts CDIS on Linux/macOS (auto venv + deps + browser via run.py).
+# Usage: bash scripts/run_linux.sh [run.py args...]
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CDIS_ROOT="$(dirname "$SCRIPT_DIR")"
+PYTHON_BIN="${PYTHON_BIN:-python3}"
 
-if [ -x "$CDIS_ROOT/venv/bin/python" ]; then
-    PYTHON_BIN="$CDIS_ROOT/venv/bin/python"
-else
-    PYTHON_BIN="python3"
-fi
-
-cd "$CDIS_ROOT/backend"
-exec "$PYTHON_BIN" app.py
+cd "$CDIS_ROOT"
+exec "$PYTHON_BIN" run.py "$@"
